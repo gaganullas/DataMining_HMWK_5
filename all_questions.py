@@ -68,10 +68,10 @@ def question3():
     answers = {}
 
     # type: string
-    answers['Agree?'] = None
+    answers['Agree?'] = ' '
 
     # type: explain_string
-    answers['Explain'] = None
+    answers['Explain'] = ' '
     return answers
 
 
