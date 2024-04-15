@@ -194,7 +194,7 @@ def question8():
     # What is the range of p for which C1 is better than random?  What is
     # "?" in the expression "p > ?"
 
-    answers['p-range'] = "p < 0.3"
+    answers['p-range'] = 0.3
     return answers
 
 
