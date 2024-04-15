@@ -19,7 +19,6 @@ def question1():
     # type: float
     # Calculate the probability.
     answers['(c)'] = 0.008  
-    # 0.08
     return answers
 
 
@@ -59,7 +58,7 @@ def question2():
 
     # type: float
     # the answer should be correct to 3 significant digits
-    answers['(d) Weight influence'] = 1.527
+    answers['(d) Weight influence'] = 1.528
     return answers
 
 
@@ -68,10 +67,11 @@ def question3():
     answers = {}
 
     # type: string
-    answers['Agree?'] = ' '
+    answers['Agree?'] = 'No'
 
     # type: explain_string
-    answers['Explain'] = ' '
+    answers['Explain'] = 'Ensemble methods rely on diverse models to improve accuracy, In Alan case, flipping a coin is a simplistic and random process that does not incorporate any meaningful information about the stock markets behavior. Each coin flip is independent of the others, so there is no correlation or learning happening between them. As a result, the ensemble of coin flips does not provide any valuable insight into whether the stock market will rise or fall'
+    
     return answers
 
 
@@ -117,31 +117,32 @@ def question6():
     answers = {}
 
     # type: eval_float
-    answers['(a) C1-TPR'] = None
+    answers['(a) C1-TPR'] = "p"
 
     # type: eval_float
-    answers['(a) C2-TPR'] = None
+    answers['(a) C2-TPR'] = "2*p"
 
     # type: eval_float
-    answers['(a) C1-FPR'] = None
+    answers['(a) C1-FPR'] = "p"
 
     # type: eval_float
-    answers['(a) C2-FPR'] = None
+    answers['(a) C2-FPR'] = "2*p"
 
     # type: string
     # Hint: The random guess line in an ROC curve corresponds to TPR=FPR.
     # choices: ['yes', 'no']
-    answers['(b) C2 better classifier than C1?'] = None
+    answers['(b) C2 better classifier than C1?'] = 'no'
 
     # type: explain_string
-    answers['(b) C2 better classifier than C1? Explain'] = None
+    answers['(b) C2 better classifier than C1? Explain'] = 'Both classifiers, C1 and C2, have the same performance level as they both fall on the random guess line in the ROC curve'
 
     # type: string
     # choices: ['TPR/FPR', 'precision/recall']
-    answers['(c) Which metric?'] = None
+    answers['(c) Which metric?'] = 'TPR/FPR'
 
     # type: explain_string
-    answers['(c) explain'] = None
+    answers['(c) explain'] = 'Precision and recall suggest Classifier C2 is better due to higher recall, but they overlook false positives. TPR and FPR offer a balanced evaluation, considering Classifier C2 higher recall but potential for more false positives, making them more suitable for assessing relative performance in scenarios where false positives are significant'
+    
     return answers
 
 
@@ -177,23 +178,23 @@ def question8():
     answers = {}
 
     # type: eval_float
-    answers['(a) precision for C0'] = 'p'
+    answers['(a) precision for C0'] =  "(p*100)/(p*1000)"
 
     # type: eval_float
-    answers['(a) recall for C0'] = '(p/100)'
+    answers['(a) recall for C0'] =  "p"
 
     # type: eval_float
-    answers['(b) F-measure of C0'] = '2 * (p * (p/100)) / (p + (p/100))'
+    answers['(b) F-measure of C0'] = "(0.2*p)/(0.1+p)"
 
     # type: string
     # choices: ['yes', 'no', 'unknown']
-    answers['C1 better than random?'] = None
+    answers['C1 better than random?'] = 'no'
 
     # type: float
     # What is the range of p for which C1 is better than random?  What is
     # "?" in the expression "p > ?"
 
-    answers['p-range'] = None
+    answers['p-range'] = "p < 0.3"
     return answers
 
 
@@ -204,9 +205,9 @@ def question9():
     # type: dict[string,float]
     # keys: ['recall', 'precision', 'F-measure', 'accuracy']
     answers['(i) metrics'] = {
-    'recall': 0.6154,
-    'precision': 0.5333,
-    'F-measure': 0.8971,
+    'recall': 0.533,
+    'precision': 0.615,
+    'F-measure': 0.571,
     'accuracy': 0.88
 }
 
@@ -243,7 +244,7 @@ def question10():
     answers['(c) Which evaluation measure? Explain'] = 'Considering the nature of cancer detection, where false positives can lead to unnecessary medical interventions and anxiety for patients, while false negatives can result in missed opportunities for treatment, it is crucial to prioritize minimizing both false positives and false negatives. Therefore, in this situation, the F1-Score would be a more appropriate evaluation measure for selecting between the two tests'
 
     # type: explain_string
-    answers['(d) Example scenario where you would reverse choise in (c)'] = 'In a cancer screening scenario where early detection is crucial but treatments are invasive, the priority is to minimize unnecessary treatments (false positives) while ensuring all cases are detected (minimizing false negatives). In such cases, the TPR/FPR ratio is a more appropriate evaluation measure as it directly assesses the tests ability to distinguish between true positive and false positive cases, helping to prioritize the minimization of false negatives while accepting a controlled level of false positives for the overall benefit of patients.'
+    answers['(d) Example scenario where you would reverse choise in (c)'] = 'In cancer screening scenarios where early detection is crucial, with false negatives posing greater risks than false positives, prioritizing sensitivity over specificity becomes essential. Thus, metrics like TPR/FPR ratios, which reflect the balance between true positives and false positives, may be preferred over F1-Score, especially when minimizing missed diagnoses is a primary concern.'
     
     return answers
 #-----------------------------------------------------------
