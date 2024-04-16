@@ -80,7 +80,7 @@ def question4():
     answers = {}
 
     # type: bool
-    answers['(a) e=0.5, independent'] = True
+    answers['(a) e=0.5, independent'] = False
 
     # type: bool
     answers['(b), independent'] = True
@@ -117,16 +117,16 @@ def question6():
     answers = {}
 
     # type: eval_float
-    answers['(a) C1-TPR'] = "p"
+    answers['(a) C1-TPR'] = 'p'
 
     # type: eval_float
-    answers['(a) C2-TPR'] = "2*p"
+    answers['(a) C2-TPR'] = '2*p'
 
     # type: eval_float
-    answers['(a) C1-FPR'] = "p"
+    answers['(a) C1-FPR'] = 'p'
 
     # type: eval_float
-    answers['(a) C2-FPR'] = "2*p"
+    answers['(a) C2-FPR'] = '2*p'
 
     # type: string
     # Hint: The random guess line in an ROC curve corresponds to TPR=FPR.
@@ -178,13 +178,13 @@ def question8():
     answers = {}
 
     # type: eval_float
-    answers['(a) precision for C0'] =  "1/10"
+    answers['(a) precision for C0'] =  '1/10'
 
     # type: eval_float
-    answers['(a) recall for C0'] =  "p"
+    answers['(a) recall for C0'] =  'p'
 
     # type: eval_float
-    answers['(b) F-measure of C0'] = "(2 * p/10) / (p + 1/10)"
+    answers['(b) F-measure of C0'] = '(2 * p/10) / (p + 1/10)'
 
     # type: string
     # choices: ['yes', 'no', 'unknown']
